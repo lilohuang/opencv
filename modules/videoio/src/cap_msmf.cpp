@@ -2552,7 +2552,7 @@ bool CvVideoWriter_MSMF::open( const cv::String& filename, int fourcc,
     videoWidth = _frameSize.width;
     videoHeight = _frameSize.height;
     fps = _fps;
-    bitRate = (UINT32)fps*videoWidth*videoHeight; // 1-bit per pixel
+    bitRate = (UINT32)(0.1*fps*videoWidth*videoHeight);
     encodingFormat = FourCC2GUID(fourcc);
     inputFormat = MFVideoFormat_RGB32;
 
